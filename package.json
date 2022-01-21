@@ -1,0 +1,30 @@
+{
+  "name": "quadb-user-api-task",
+  "version": "1.0.0",
+  "description": "QuadB Internship Test",
+  "main": "server.js",
+  "repository": "git@github.com:allwells/quadb-user-api-task.git",
+  "author": "allwells <aleenfestus@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "inspect": "node --inspect server.js",
+    "deploy": "git push origin master && git push heroku master",
+    "logs:prod": "heroku logs --tail",
+    "lint": "clear && eslint .",
+    "test": "clear && cross-env NODE_ENV=test jest --verbose --runInBand"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  }
+}
