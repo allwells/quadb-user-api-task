@@ -8,7 +8,9 @@ User.init({
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4
     },
-    user_name: DataTypes.STRING,
+    user_name: {
+        type: DataTypes.STRING
+    },
     user_email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -18,10 +20,18 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    user_image: DataTypes.STRING,
-    total_orders: DataTypes.STRING,
-    created_at: DataTypes.DATEONLY,
-    last_logged_in: DataTypes.STRING,
+    user_image: {
+        type: DataTypes.STRING
+    },
+    total_orders: {
+        type: DataTypes.STRING
+    },
+    created_at: {
+        type: DataTypes.NOW
+    },
+    last_logged_in: {
+        type: DataTypes.STRING
+    },
 },
 {
     createdAt: false,
