@@ -5,19 +5,19 @@ class User extends Model {}
 
 User.init({
     userName: DataTypes.STRING,
-    userEmail: {
+    user_email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
-    userPassword: {
+    user_password: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    userImage: DataTypes.STRING,
-    totalOrders: DataTypes.STRING,
-    createdAt: DataTypes.NOW,
-    lastLoggedIn: DataTypes.STRING,
+    user_image: DataTypes.STRING,
+    total_orders: DataTypes.STRING,
+    created_at: DataTypes.NOW,
+    last_logged_in: DataTypes.STRING,
 },
 {
     sequelize,
