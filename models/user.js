@@ -4,7 +4,11 @@ const sequelize = require("../database")
 class User extends Model {}
 
 User.init({
-    userName: DataTypes.STRING,
+    user_id: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4
+    },
+    user_name: DataTypes.STRING,
     user_email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -16,10 +20,12 @@ User.init({
     },
     user_image: DataTypes.STRING,
     total_orders: DataTypes.STRING,
-    created_at: DataTypes.NOW,
+    created_at: DataTypes.DATEONLY,
     last_logged_in: DataTypes.STRING,
 },
 {
+    createdAt: false,
+    updatedAt: false,
     sequelize,
     modelName: "users"
 })
